@@ -1,0 +1,106 @@
+:root {
+	--bg: #111111;
+	--surface: #1c1c1c;
+	--border: #2e2e2e;
+	--text: #e8e8e8;
+	--muted: #888888;
+	--accent: #4f8ef7;
+	--c-urgent: #f87171;
+	--c-high: #fbbf24;
+	--c-done: #4ade80;
+	color-scheme: dark;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+	font-size: 20px;
+	background: var(--bg);
+	color: var(--text);
+	line-height: 1.5;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	padding: 0 12px;
+	height: 42px;
+	background: var(--surface);
+	border-bottom: 1px solid var(--border);
+	overflow-x: auto;
+	scrollbar-width: none;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+nav::-webkit-scrollbar {
+	display: none;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	padding: 0 8px;
+	border-radius: 4px;
+	color: var(--muted);
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 14px;
+	align-self: stretch;
+}
+nav a:hover,
+nav a.active {
+	color: var(--text);
+	background: var(--bg);
+}
+nav .spacer {
+	flex: 1;
+	min-width: 8px;
+}
+/* The one action in the bar worth making obvious. */
+nav a.nav-add {
+	background: var(--accent);
+	color: #fff;
+	font-weight: 600;
+	align-self: center;
+	padding: 5px 12px;
+}
+nav a.nav-add:hover {
+	background: var(--accent);
+	color: #fff;
+	opacity: 0.88;
+}
+nav .nav-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	color: var(--muted);
+	padding: 0 8px;
+	border-radius: 4px;
+	white-space: nowrap;
+	align-self: stretch;
+}
+nav .nav-btn:hover {
+	color: var(--text);
+	background: var(--bg);
+}
+nav .nav-form {
+	display: flex;
+}
+nav .nav-input {
+	font-size: 14px;
+	padding: 3px 8px;
+	border: 1px solid var(--accent);
+	border-radius: 4px;
+	outline: none;
+	width: 140px;
+	background: var(--bg);
+	color: var(--text);
+}
